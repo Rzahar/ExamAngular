@@ -37,5 +37,9 @@ export class PersonnageComponent implements OnInit {
     })
   }
 
+  showActive() {}
+  showInactive(){}
+  isActive(){}
+
       }
 
