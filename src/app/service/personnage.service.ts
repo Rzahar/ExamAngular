@@ -13,18 +13,18 @@ export class PersonnageService {
 
 
     getAll(): Observable<Personnage[]> {
-      return this.HttpClient.get<Personnage[]>(`${environment.apiBaseUrl}/personnage`);
+      return this.HttpClient.get<Personnage[]>(`${environment.apiBaseUrl}`);
     }
 
     create(personnage: Personnage):Observable<Personnage>{
-      return this.HttpClient.post<Personnage>('${environment.apiBaseUrl}/personnages',personnage);
+      return this.HttpClient.post<Personnage>('${environment.apiBaseUrl}/',personnage);
     }
 
     update(personnage:Personnage):Observable<Personnage>{
-      return this.HttpClient.put<Personnage>('${environment.apiBaseUrl}/personnages',personnage);
+      return this.HttpClient.put<Personnage>('${environment.apiBaseUrl}/',personnage);
     }
 
     delete(personnage:Personnage):Observable<Personnage>{
-      return this.HttpClient.delete<Personnage>('${environment.apiBaseUrl}/personnages/${id}');
+      return this.HttpClient.delete<Personnage>('${environment.apiBaseUrl}/${id}');
     }
 }

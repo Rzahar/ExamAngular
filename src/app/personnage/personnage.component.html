@@ -1,0 +1,13 @@
+
+<!-- <button (click)="showActive()"> Afficher les joueurs actifs </button> -->
+<!-- <button (click)="showInactive()"> Afficher les joueurs inactifs </button> -->
+<!-- <button (click)="create(personnage)"> Creer personnage </button> -->
+<!-- <button (click)="isActive()"> Rendre actif/inactif </button> -->
+
+<p *ngFor="let personnage of personnageList">
+Surnom : {{personnage.title}} <br>
+Id : {{personnage.id}} <br>
+Nom : {{personnage.name}} <br>
+Actif : {{personnage.active}} <br>
+<button (click)="delete(personnage)"> Supprimer le personnage </button>
+</p>
